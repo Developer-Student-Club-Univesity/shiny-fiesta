@@ -65,7 +65,7 @@ void insereNoArvoreOrdenada(int valor)
 	if(corrente == NULL)
 	{
 		a.raiz = novoNo;
-		printf("No inserido na raiz. \n");
+		printf("No inserido na raiz. \n\n");
 		return;
 	}
 	
@@ -74,7 +74,7 @@ void insereNoArvoreOrdenada(int valor)
 		if(novoNo->dado < corrente->dado){
 			corrente = corrente->esq;
 			if(!corrente){
-				printf("No inserido � esquerda do no %d. \n", pai->dado);
+				printf("Numero %d inserido a esquerda do no %d. \n", novoNo->dado, pai->dado);
 				pai->esq = novoNo;
 				return;
 			}
@@ -82,7 +82,7 @@ void insereNoArvoreOrdenada(int valor)
 		else{
 			corrente = corrente->dir;
 			if(!corrente){
-				printf("No inserido � direita do no %d. \n", pai->dado);
+				printf("Numero %d inserido a direita do no %d. \n", novoNo->dado, pai->dado);
 				pai->dir = novoNo;
 				return;
 			}
@@ -129,13 +129,16 @@ int main()
 {
 	inicializaArvore(a);
 	
-	insereNoArvoreOrdenada(10);
-	insereNoArvoreOrdenada(15);
-	insereNoArvoreOrdenada(5);
+	insereNoArvoreOrdenada(2);
+	insereNoArvoreOrdenada(1);
+	insereNoArvoreOrdenada(0);
+	insereNoArvoreOrdenada(9);
 	insereNoArvoreOrdenada(3);
-	insereNoArvoreOrdenada(7);
-	insereNoArvoreOrdenada(12);
-	insereNoArvoreOrdenada(17);
+	insereNoArvoreOrdenada(9);
+	insereNoArvoreOrdenada(8);
+	insereNoArvoreOrdenada(9);
+	insereNoArvoreOrdenada(5);
+
 	
 	printf("\nBusca em ordem: \n");
 	emOrdem(a.raiz);
