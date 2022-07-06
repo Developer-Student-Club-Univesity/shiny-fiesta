@@ -133,6 +133,8 @@ int main()
 {
 
 	// 21093989-5
+	// 2       1       0       3       8       9       5      % 
+	
 	// 2       1       0       9       3       9       8       9       5   
 
 	// 2       1       0       3       9       9       9       8       5   
@@ -140,12 +142,12 @@ int main()
 	inicializaArvore(a);
 
 	insereNoArvoreOrdenada(5);
-	insereNoArvoreOrdenada(8);
+	insereNoArvoreOrdenada(9);
 	insereNoArvoreOrdenada(3);
+	insereNoArvoreOrdenada(8);
 	insereNoArvoreOrdenada(0);
 	insereNoArvoreOrdenada(1);
 	insereNoArvoreOrdenada(2);
-	insereNoArvoreOrdenada(9);
 	insereNoArvoreOrdenada(9);
 	insereNoArvoreOrdenada(9);
 
