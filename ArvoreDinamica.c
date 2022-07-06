@@ -134,6 +134,7 @@ int main()
 	// 2       1       0       3       9       9       9       8       5   
 	
 	inicializaArvore(a);
+	
 	insereNoArvoreOrdenada(5);
 	insereNoArvoreOrdenada(8);
 	insereNoArvoreOrdenada(3);
