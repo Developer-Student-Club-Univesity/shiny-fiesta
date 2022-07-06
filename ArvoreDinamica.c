@@ -27,6 +27,7 @@ ARVORE a;
 void inicializaArvore(ARVORE arv);
 void inicializaNo(NO* n, int val);
 void insereNoArvoreOrdenada(int valor);
+
 void preOrdem(NO* raiz);
 void emOrdem(NO* raiz);
 void posOrdem(NO* raiz);
@@ -50,9 +51,9 @@ void inicializaNo(NO* n, int val){
 	n->dado = val;
 }
 
-//Fun��o que realiza a inser��o de maneira ordenada
-//Valores menores  v�o � esquerda
-//Valores maiores ou iguais v�o � direita
+//Funcao que realiza a insercao de maneira ordenada
+//Valores menores  vao a esquerda
+//Valores maiores vao a direita
 void insereNoArvoreOrdenada(int valor)
 {
 	NO* corrente = a.raiz;
@@ -70,8 +71,10 @@ void insereNoArvoreOrdenada(int valor)
 	}
 	
 	while(corrente){
-		pai = corrente;
+		//Valores menores  vao a esquerda
+		//Valores maiores vao a direita
 		if(novoNo->dado < corrente->dado){
+			pai = corrente;
 			corrente = corrente->esq;
 			if(!corrente){
 				printf("Numero %d inserido a esquerda do no %d. \n", novoNo->dado, pai->dado);
@@ -80,6 +83,7 @@ void insereNoArvoreOrdenada(int valor)
 			}
 		}
 		else{
+			pai = corrente;
 			corrente = corrente->dir;
 			if(!corrente){
 				printf("Numero %d inserido a direita do no %d. \n", novoNo->dado, pai->dado);
@@ -108,13 +112,13 @@ void preOrdem(NO* raiz)
 
 
 //Executa o caminhamento em-ordem a partir do n� indicado por "raiz"
-void emOrdem(NO* raiz){
-	if(raiz){
-		emOrdem(raiz->esq);
-		printf("%d \t", raiz->dado);
-		emOrdem(raiz->dir);
-	}
-}
+// void emOrdem(NO* raiz){
+// 	if(raiz){
+// 		emOrdem(raiz->esq);
+// 		printf("%d \t", raiz->dado);
+// 		emOrdem(raiz->dir);
+// 	}
+// }
 
 //Executa o caminhamento pos-ordem a partir do n� indicado por "raiz"
 void posOrdem(NO* raiz){
@@ -134,7 +138,7 @@ int main()
 	// 2       1       0       3       9       9       9       8       5   
 	
 	inicializaArvore(a);
-	
+
 	insereNoArvoreOrdenada(5);
 	insereNoArvoreOrdenada(8);
 	insereNoArvoreOrdenada(3);
@@ -146,8 +150,8 @@ int main()
 	insereNoArvoreOrdenada(9);
 
 	
-	printf("\nBusca em ordem: \n");
-	emOrdem(a.raiz);
+	// printf("\nBusca em ordem: \n");
+	// emOrdem(a.raiz);
 	
 	printf("\nBusca pre ordem: \n");
 	preOrdem(a.raiz);
