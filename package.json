@@ -1,0 +1,27 @@
+{
+  "name": "c-project",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Estevam",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "prebuild": "",
+    "build": "",
+    "format": "",
+    "start": "",
+    "start:dev": "",
+    "start:debug": "",
+    "start:prod": "",
+    "lint": "",
+    "test": "",
+    "test:watch": "",
+    "test:cov": "",
+    "test:debug": "",
+    "test:e2e": ""
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
