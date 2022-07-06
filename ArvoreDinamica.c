@@ -130,7 +130,7 @@ int main()
 
 	// 21093989-5
 	// 2       1       0       9       3       9       8       9       5   
-	
+
 	// 2       1       0       3       9       9       9       8       5   
 	
 	inicializaArvore(a);
@@ -143,6 +143,7 @@ int main()
 	insereNoArvoreOrdenada(9);
 	insereNoArvoreOrdenada(9);
 	insereNoArvoreOrdenada(9);
+
 	
 	printf("\nBusca em ordem: \n");
 	emOrdem(a.raiz);
